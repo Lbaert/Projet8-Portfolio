@@ -1,4 +1,3 @@
-// Header.js
 import React, { useState } from 'react';
 import Sidebar from './Sidebar';
 import '../../styles/main.scss';

@@ -1,4 +1,3 @@
-// Header.scss
 header {
   display: flex;
   justify-content: space-between;
@@ -54,6 +53,9 @@ header {
   .menu-icon {
     font-size: 1.5rem;
     cursor: pointer;
+  }
+  .menu-icon:hover {
+    color: #11E397;
   }
 
   .modal {

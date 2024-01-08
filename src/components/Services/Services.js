@@ -1,6 +1,5 @@
-// Services.js
 import React from 'react';
-import './Services.scss'; // Assurez-vous de créer le fichier Services.scss
+import './Services.scss';
 
 const Services = () => {
   const servicesData = [

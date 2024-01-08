@@ -1,6 +1,6 @@
 // Contact.js
 import React from 'react';
-import './Contact.scss'; // Assurez-vous de créer le fichier Contact.scss
+import './Contact.scss';
 
 const Contact = () => {
   return (

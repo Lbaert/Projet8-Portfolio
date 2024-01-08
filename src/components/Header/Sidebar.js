@@ -1,4 +1,3 @@
-// Sidebar.js
 import React, { useState, useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import './Header.scss';
@@ -32,17 +31,14 @@ const Sidebar = ({ isOpen, toggleSidebar }) => {
       </div>
       {isModalOpen && (
         <div className="modal" ref={modalRef}>
-          <div className="close-icon" onClick={toggleModal}>
-            ✕
-          </div>
           <ul>
-        <li><a href="#home" onClick={toggleSidebar}>Home</a></li>
-        <li><a href="#about" onClick={toggleSidebar}>About</a></li>
-        <li><a href="#services" onClick={toggleSidebar}>Services</a></li>
-        <li><a href="#projects" onClick={toggleSidebar}>Projects</a></li>
-        <li><a href="#skills" onClick={toggleSidebar}>Skills</a></li>
-        <li><a href="#contact" onClick={toggleSidebar}>Contact</a></li>
-      </ul>
+            <li><a href="#home" onClick={toggleSidebar}>Home</a></li>
+            <li><a href="#about" onClick={toggleSidebar}>About</a></li>
+            <li><a href="#services" onClick={toggleSidebar}>Services</a></li>
+            <li><a href="#projects" onClick={toggleSidebar}>Projects</a></li>
+            <li><a href="#skills" onClick={toggleSidebar}>Skills</a></li>
+            <li><a href="#contact" onClick={toggleSidebar}>Contact</a></li>
+          </ul>
         </div>
       )}
     </div>

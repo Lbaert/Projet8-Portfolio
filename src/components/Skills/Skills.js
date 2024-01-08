@@ -1,6 +1,5 @@
-// Skills.js
 import React from 'react';
-import './Skills.scss'; // Assurez-vous de créer le fichier Skills.scss
+import './Skills.scss'; 
 
 // Fonction pour mapper les technologies aux icônes correspondantes
 const mapTechnologiesToIcons = (technologies) => {
