@@ -101,12 +101,31 @@ const Projects = () => {
     };
   }, [selectedProject]);
 
+
+  const navigateToProject = (direction) => {
+    const currentIndex = projectsData.findIndex((project) => project.id === selectedProject);
+    let newIndex;
+
+    if (direction === 'prev') {
+      newIndex = currentIndex > 0 ? currentIndex - 1 : projectsData.length - 1;
+    } else {
+      newIndex = currentIndex < projectsData.length - 1 ? currentIndex + 1 : 0;
+    }
+
+    setSelectedProject(projectsData[newIndex].id);
+  };
+
   return (
     <section id="projects" className="projects">
       <h2>📒 Mes Projets</h2>
       <div className={`projects-list ${projectsListClassName}`}>
       {projectsData.map((project) => (
         <div key={project.id} className={`project-item project-${project.id} ${selectedProject !== null && selectedProject !== project.id ? 'hidden' : ''}`} onClick={() => toggleProjectDetails(project.id)}>          
+            {selectedProject === project.id && (
+              <div className="back-arrow" onClick={() => toggleProjectDetails(null)}>
+                ↩️
+              </div>
+            )}
           <img src={project.imageUrl} alt={project.title} />
             <div className="project-details">
               <h3>{project.title}</h3>
@@ -116,7 +135,6 @@ const Projects = () => {
                   <img key={index} src={`./img/icons/${tech}.png`} alt={tech} />
                 ))}
               </div>
-              {/* Ajoutez le collapse pour les détails supplémentaires */}
               {selectedProject === project.id && (
                 <div className="additional-details">
                   <p>{project.text}</p>

@@ -103,3 +103,13 @@
 
   }
 }
+
+
+.project-item .back-arrow {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  cursor: pointer;
+  font-size: 20px; // Ajustez la taille du caractère selon vos besoins
+  color: #000; 
+}
