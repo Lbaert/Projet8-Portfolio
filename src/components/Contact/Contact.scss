@@ -1,0 +1,79 @@
+// Contact.scss
+.contactSection {
+    padding: 50px 0;
+    background-color: #ffffff; // Couleur de fond de la section
+    text-align: -webkit-center;
+  
+    h2 {
+      text-align: center;
+      margin-bottom: 30px;
+      font-size: 2rem;
+      color: #333; // Couleur du titre
+    }
+  
+    .social-buttons {
+      text-align: center;
+      margin-bottom: 20px;
+  
+      a {
+        display: inline-block;
+        margin: 0 10px;
+        padding: 10px 20px;
+        background-color: rgb(236, 236, 236); // Couleur des boutons
+        color: black; // Couleur du texte des boutons
+        text-decoration: none;
+        border-radius: 5px;
+  
+        &:hover {
+          background-color: #11E397; // Couleur au survol
+        }
+      }
+    }
+  
+    .contact-form {
+      max-width: 600px;
+      margin: 0 auto;
+  
+      form {
+        display: flex;
+        flex-direction: column;
+  
+        label {
+          margin-bottom: 8px;
+          font-size: 1rem;
+          color: #333; // Couleur du texte des étiquettes
+        }
+  
+        input,
+        textarea {
+          margin-bottom: 16px;
+          padding: 10px;
+          font-size: 1rem;
+          border: 1px solid #ddd;
+          border-radius: 5px;
+  
+          &:focus {
+            outline: none;
+            border-color: #11E397; // Couleur de la bordure au focus
+          }
+        }
+  
+        button {
+          background-color: #48c899; // Couleur du bouton d'envoi
+          padding: 10px 20px;
+          font-size: 1rem;
+          border: none;
+          border-radius: 5px;
+          cursor: pointer;
+  
+          &:hover {
+            background-color: #11E397; // Couleur au survol
+          }
+        }
+      }
+    }
+  }
+  
+  .contact {
+    width: 80%;
+  }

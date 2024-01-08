@@ -1,0 +1,92 @@
+// Projects.scss
+.projects {
+  padding: 50px 20px;
+  background-color: #fff;
+  text-align: -webkit-center;
+
+  h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 2rem;
+    color: #171725;
+  }
+
+  .projects-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    justify-items: center;
+    width: 80%;
+    max-width: 1000px;
+
+    .project-item {
+      text-align: center;
+      padding: 20px;
+      border: 1px solid #171725;
+      transition: transform 0.5s ease;
+      background-color: white;
+
+      img {
+        height: 30px;
+        filter: grayscale(100%);
+        object-fit: cover;
+      }
+
+
+      .project-details {
+        padding: 15px;
+
+        h3 {
+          display: none;
+        }
+
+        p {
+          color: #666;
+          margin: 0;
+        }
+
+        .technologies {
+          display: flex;
+          justify-content: center;
+          margin-top: 15px;
+
+          img {
+            max-width: 30px;
+            margin-right: 10px;
+          }
+        }
+      }
+
+      &:hover {
+        img {
+          filter: grayscale(0%); 
+        }
+      }
+    }
+  }
+}
+
+.project {
+  margin: 20px;
+}
+
+.technologies {
+  display: flex;
+  justify-content: center;
+}
+
+.technologies img {
+  margin: 0 5px;
+}
+
+.project-item:hover {
+  box-shadow: -10px 0px 13px -7px #000000, 10px 0px 13px -7px #000000, 5px 5px 15px 5px rgba(0,0,0,0);
+  transform: scale(1.05);
+}
+
+
+@media screen and (max-aspect-ratio: 10/9) {
+  .projects .projects-list {
+    display: block;
+  }
+}
