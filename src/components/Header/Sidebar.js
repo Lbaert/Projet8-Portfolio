@@ -27,17 +27,17 @@ const Sidebar = ({ isOpen, toggleSidebar }) => {
   return (
     <div className={`sidebar ${isOpen ? 'open' : ''}`}>
       <div className="menu-icon" onClick={toggleModal}>
-      <i class="fa-solid fa-bars"></i>
+        <i className="fa-solid fa-bars"></i>
       </div>
       {isModalOpen && (
         <div className="modal" ref={modalRef}>
           <ul>
-            <li><a href="#home" onClick={toggleSidebar}>Home</a></li>
-            <li><a href="#about" onClick={toggleSidebar}>About</a></li>
-            <li><a href="#services" onClick={toggleSidebar}>Services</a></li>
-            <li><a href="#projects" onClick={toggleSidebar}>Projects</a></li>
-            <li><a href="#skills" onClick={toggleSidebar}>Skills</a></li>
-            <li><a href="#contact" onClick={toggleSidebar}>Contact</a></li>
+            <li><a href="#home" onClick={toggleSidebar}><img src='./img/logo.png' alt="Logo" className='logo'/></a></li>
+            <li><a href="#about" onClick={toggleSidebar}><i className="fa-solid fa-address-card fa-xl"></i><span>About</span></a></li>
+            <li><a href="#services" onClick={toggleSidebar}><i className="fa-solid fa-layer-group fa-xl"></i><span>Services</span></a></li>
+            <li><a href="#projects" onClick={toggleSidebar}><i className="fa-solid fa-list-check fa-xl"></i><span>Projects</span></a></li>
+            <li><a href="#skills" onClick={toggleSidebar}><i className="fa-solid fa-microchip fa-xl"></i><span>Skills</span></a></li>
+            <li><a href="#contact" onClick={toggleSidebar}><i className="fa-solid fa-address-book fa-xl"></i><span>Contact</span></a></li>
           </ul>
         </div>
       )}
