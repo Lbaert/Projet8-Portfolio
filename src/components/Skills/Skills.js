@@ -54,7 +54,7 @@ const Skills = () => {
 
   return (
     <section id="skills" className="skills">
-      <h2>💻 Mes Compétences</h2>
+      <h2><i class="fa-solid fa-microchip"></i> Mes Compétences</h2>
       <div className="skills-list">
         {mapTechnologiesToIcons(skillsList)}
       </div>

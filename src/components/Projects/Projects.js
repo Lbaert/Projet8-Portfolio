@@ -81,6 +81,12 @@ const Projects = () => {
     } else {
       // Sinon, ouvrez le collapse pour le projet sélectionné
       setSelectedProject(projectId);
+
+      // Ajoutez le défilement vers l'ancre #projects
+      const projectsSection = document.getElementById('projects');
+      if (projectsSection) {
+        projectsSection.scrollIntoView({ behavior: 'smooth' });
+      }
     }
   };
 
@@ -117,13 +123,13 @@ const Projects = () => {
 
   return (
     <section id="projects" className="projects">
-      <h2>📒 Mes Projets</h2>
+      <h2><i class="fa-solid fa-list-check"></i> Mes Projets</h2>
       <div className={`projects-list ${projectsListClassName}`}>
       {projectsData.map((project) => (
         <div key={project.id} className={`project-item project-${project.id} ${selectedProject !== null && selectedProject !== project.id ? 'hidden' : ''}`} onClick={() => toggleProjectDetails(project.id)}>          
             {selectedProject === project.id && (
               <div className="back-arrow" onClick={() => toggleProjectDetails(null)}>
-                ↩️
+                <i class="fa-solid fa-reply"></i>
               </div>
             )}
           <img src={project.imageUrl} alt={project.title} />

@@ -27,7 +27,7 @@ const Sidebar = ({ isOpen, toggleSidebar }) => {
   return (
     <div className={`sidebar ${isOpen ? 'open' : ''}`}>
       <div className="menu-icon" onClick={toggleModal}>
-        ☰
+      <i class="fa-solid fa-bars"></i>
       </div>
       {isModalOpen && (
         <div className="modal" ref={modalRef}>
