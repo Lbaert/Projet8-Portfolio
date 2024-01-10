@@ -1,8 +1,9 @@
 import React from 'react';
-import './Skills.scss'; 
+import './Skills.scss';
 
 // Fonction pour mapper les technologies aux icônes correspondantes
 const mapTechnologiesToIcons = (technologies) => {
+  // Correspondance entre les technologies et les icônes
   const iconMap = {
     HTML5: 'html.png',
     CSS3: 'css.png',
@@ -23,6 +24,7 @@ const mapTechnologiesToIcons = (technologies) => {
     Notion: 'notion.png',
   };
 
+  // Mapper les technologies aux icônes correspondantes
   return technologies.map((tech, index) => (
     <div key={index} className="skill-item">
       <img src={`./img/icons/${iconMap[tech]}`} alt={tech} />
@@ -32,6 +34,7 @@ const mapTechnologiesToIcons = (technologies) => {
 };
 
 const Skills = () => {
+  // Liste des compétences
   const skillsList = [
     'HTML5',
     'CSS3',
@@ -54,7 +57,7 @@ const Skills = () => {
 
   return (
     <section id="skills" className="skills">
-      <h2><i class="fa-solid fa-microchip"></i> Mes Compétences</h2>
+      <h2><i className="fa-solid fa-microchip"></i> Mes Compétences</h2>
       <div className="skills-list">
         {mapTechnologiesToIcons(skillsList)}
       </div>

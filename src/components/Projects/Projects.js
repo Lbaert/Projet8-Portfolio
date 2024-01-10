@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import './Projects.scss';
 
+// Fonction pour mapper les technologies aux icônes correspondantes
 const mapTechnologiesToIcons = (technologies) => {
   const iconMap = {
     HTML: 'html.png',
@@ -24,6 +25,7 @@ const mapTechnologiesToIcons = (technologies) => {
 const Projects = () => {
   const [selectedProject, setSelectedProject] = useState(null);
 
+  // Tableau de données des projets
   const projectsData = [
     {
       id: 1,
@@ -157,8 +159,10 @@ const Projects = () => {
     },
   ];
 
+// Classe CSS pour afficher ou masquer les détails du projet
   const projectsListClassName = selectedProject !== null ? 'projects-list-open' : '';
 
+  // Fonction pour basculer l'affichage des détails du projet
   const toggleProjectDetails = (projectId) => {
       setSelectedProject(projectId);
 
@@ -169,6 +173,7 @@ const Projects = () => {
   };
 
   useEffect(() => {
+    // Fonction pour fermer les détails du projet lorsqu'on clique en dehors
     const closeProjectDetails = (event) => {
       const isClickOutsideCollapse = !event.target.closest('.project-item') && !event.target.closest('.back-arrow');
   

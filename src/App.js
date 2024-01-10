@@ -12,6 +12,7 @@ import Footer from './components/Footer/Footer';
 
 function App() {
   useEffect(() => {
+    // Gestionnaire pour les touches de clavier
     const handleKeyPress = (e) => {
       switch (e.key) {
         case 'ArrowUp':
@@ -31,6 +32,7 @@ function App() {
       }
     };
 
+    // Fonction pour naviguer vers une section adjacente
     const navigateToAdjacentSection = (direction) => {
       const sections = ['home', 'about', 'services', 'projects', 'skills', 'contact'];
       const currentSectionIndex = sections.indexOf(window.location.hash.substring(1));
@@ -48,12 +50,14 @@ function App() {
       window.location.href = `#${nextSection}`;
     };
 
+    // Ajout de l'écouteur d'événement pour les touches de clavier
     document.addEventListener('keydown', handleKeyPress);
 
+    // Nettoyage de l'écouteur d'événement lors du démontage du composant
     return () => {
       document.removeEventListener('keydown', handleKeyPress);
     };
-  }, []);
+  }, []); // Le tableau vide en tant que dépendance signifie que l'effet ne s'exécute qu'une seule fois au montage du composant
 
   return (
     <Router>

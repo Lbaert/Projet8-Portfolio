@@ -2,18 +2,19 @@ import React from 'react';
 import './Services.scss';
 
 const Services = () => {
+  // Données des services
   const servicesData = [
     {
       id: 1,
       title: 'Création de sites web',
       description: 'Développement de sites vitrines, e-commerce et applications web sur mesure.',
-      imageUrl: './img/services/web.webp', 
+      imageUrl: './img/services/web.webp',
     },
     {
       id: 2,
       title: 'Expérience utilisateur',
       description: 'Conception d\'interfaces fluides et attrayantes pour une expérience utilisateur optimale.',
-      imageUrl: './img/services/ui.webp', 
+      imageUrl: './img/services/ui.webp',
     },
     {
       id: 3,
@@ -37,14 +38,15 @@ const Services = () => {
       id: 6,
       title: 'Analyse de données',
       description: 'Installation d\'outils d\'analyse pour suivre les performances du site et fournir des rapports.',
-      imageUrl: './img/services/stat.webp', 
+      imageUrl: './img/services/stat.webp',
     }
   ];
 
   return (
     <section id="services" className="services">
-      <h2><i class="fa-solid fa-layer-group"></i> Mes Services</h2>
+      <h2><i className="fa-solid fa-layer-group"></i> Mes Services</h2>
       <div className="services-list">
+        {/* Mapper les données des services pour créer des éléments JSX */}
         {servicesData.map((service) => (
           <div key={service.id} className="service-item">
             <img src={service.imageUrl} alt={service.title} />
