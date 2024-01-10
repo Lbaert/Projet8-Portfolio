@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, animateScroll as scroll } from 'react-scroll'; // Importez animateScroll
 import './Header.scss';
 
 const Sidebar = ({ isOpen, toggleSidebar }) => {
@@ -32,12 +32,36 @@ const Sidebar = ({ isOpen, toggleSidebar }) => {
       {isModalOpen && (
         <div className="modal" ref={modalRef}>
           <ul>
-            <li><a href="#home" onClick={toggleSidebar}><img src='./img/logo.png' alt="Logo" className='logo'/></a></li>
-            <li><a href="#about" onClick={toggleSidebar}><i className="fa-solid fa-address-card fa-xl"></i><span>About</span></a></li>
-            <li><a href="#services" onClick={toggleSidebar}><i className="fa-solid fa-layer-group fa-xl"></i><span>Services</span></a></li>
-            <li><a href="#projects" onClick={toggleSidebar}><i className="fa-solid fa-list-check fa-xl"></i><span>Projects</span></a></li>
-            <li><a href="#skills" onClick={toggleSidebar}><i className="fa-solid fa-microchip fa-xl"></i><span>Skills</span></a></li>
-            <li><a href="#contact" onClick={toggleSidebar}><i className="fa-solid fa-address-book fa-xl"></i><span>Contact</span></a></li>
+            <li>
+              <Link to="home" smooth={true} duration={500} onClick={toggleSidebar}>
+                <img src='./img/logo.png' alt="Logo" className='logo'/>
+              </Link>
+            </li>
+            <li>
+              <Link to="about" smooth={true} duration={500} onClick={toggleSidebar}>
+                <i className="fa-solid fa-address-card fa-xl"></i><span>À propos de moi</span>
+              </Link>
+            </li>
+            <li>
+              <Link to="services" smooth={true} duration={500} onClick={toggleSidebar}>
+                <i className="fa-solid fa-layer-group fa-xl"></i><span>Mes Services</span>
+              </Link>
+            </li>
+            <li>
+              <Link to="projects" smooth={true} duration={500} onClick={toggleSidebar}>
+                <i className="fa-solid fa-list-check fa-xl"></i><span>Mes Projets</span>
+              </Link>
+            </li>
+            <li>
+              <Link to="skills" smooth={true} duration={500} onClick={toggleSidebar}>
+                <i className="fa-solid fa-microchip fa-xl"></i><span>Mes Compétences</span>
+              </Link>
+            </li>
+            <li>
+              <Link to="contact" smooth={true} duration={500} onClick={toggleSidebar}>
+                <i className="fa-solid fa-address-book fa-xl"></i><span>Contactez-moi</span>
+              </Link>
+            </li>
           </ul>
         </div>
       )}

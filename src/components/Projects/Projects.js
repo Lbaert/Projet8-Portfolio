@@ -168,47 +168,35 @@ const Projects = () => {
       }
   };
 
-useEffect(() => {
-  const closeProjectDetails = (event) => {
-    // Fermer le collapse si le clic est en dehors du composant de la collapse
-    const isClickOutsideCollapse = !event.target.closest('.project-details');
-    if (selectedProject && isClickOutsideCollapse) {
-      setSelectedProject(null);
-    }
-  };
-
-  // Ajouter un écouteur d'événements au document.body pour détecter les clics en dehors de la collapse du projet
-  document.body.addEventListener('click', closeProjectDetails);
-
-  // Nettoyer l'écouteur d'événements lors du démontage du composant
-  return () => {
-    document.body.removeEventListener('click', closeProjectDetails);
-  };
-}, [selectedProject]);
-
-
-  const navigateToProject = (direction) => {
-    const currentIndex = projectsData.findIndex((project) => project.id === selectedProject);
-    let newIndex;
-
-    if (direction === 'prev') {
-      newIndex = currentIndex > 0 ? currentIndex - 1 : projectsData.length - 1;
-    } else {
-      newIndex = currentIndex < projectsData.length - 1 ? currentIndex + 1 : 0;
-    }
-
-    setSelectedProject(projectsData[newIndex].id);
-  };
+  useEffect(() => {
+    const closeProjectDetails = (event) => {
+      const isClickOutsideCollapse = !event.target.closest('.project-item') && !event.target.closest('.back-arrow');
+  
+      if (selectedProject && isClickOutsideCollapse) {
+        setSelectedProject(null);
+      }
+    };
+  
+    document.body.addEventListener('click', closeProjectDetails);
+  
+    return () => {
+      document.body.removeEventListener('click', closeProjectDetails);
+    };
+  }, [selectedProject]);
 
   return (
     <section id="projects" className="projects">
       <h2><i class="fa-solid fa-list-check"></i> Mes Projets</h2>
       <div className={`projects-list ${projectsListClassName}`}>
       {projectsData.map((project) => (
-        <div key={project.id} className={`project-item project-${project.id} ${selectedProject !== null && selectedProject !== project.id ? 'hidden' : ''}`} onClick={() => toggleProjectDetails(project.id)}>          
+
+          <div
+            key={project.id}
+            className={`project-item project-${project.id} ${selectedProject !== null && selectedProject !== project.id ? 'hidden' : ''} ${selectedProject === null ? 'project-item-closed' : ''}`}
+            onClick={() => toggleProjectDetails(project.id)}>
             {selectedProject === project.id && (
-              <div className="back-arrow" onClick={() => toggleProjectDetails(null)}>
-                <i class="fa-solid fa-reply"></i>
+              <div className="back-arrow" onClick={(e) => { e.stopPropagation(); toggleProjectDetails(null); }}>
+                <i className="fa-solid fa-reply"></i>
               </div>
             )}
           <img src={project.imageUrl} alt={project.title} />
