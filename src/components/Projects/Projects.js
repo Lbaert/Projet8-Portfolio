@@ -4,7 +4,7 @@ import './Projects.scss';
 // Fonction pour mapper les technologies aux icônes correspondantes
 const mapTechnologiesToIcons = (technologies) => {
   const iconMap = {
-    HTML: 'html.png',
+    html: 'html.png',
     CSS: 'css.png',
     React: 'react.png',
     Sass: 'sass.png',
@@ -139,7 +139,7 @@ const Projects = () => {
       title: 'Sophie Bluel',
       description: 'Créez une page web dynamique avec JavaScript',
       imageUrl: './img/projects/sophie.webp',
-      technologies: ['HTML', 'CSS'],
+      technologies: ['html', 'css'],
       text: (
         <div className='text-collapse'>
           <p>J'ai reçu le code de base, la maquette du site ainsi que le Kanban. Voici les étapes que j'ai suivies :</p>
