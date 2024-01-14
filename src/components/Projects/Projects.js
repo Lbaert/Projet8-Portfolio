@@ -32,7 +32,7 @@ const Projects = () => {
       title: 'Booki',
       description: 'Créez la page d\'accueil d\'une agence de voyage',
       imageUrl: './img/projects/booki.webp',
-      technologies: ['HTML', 'CSS'],
+      technologies: ['html', 'css'],
       text: (
         <div className='text-collapse'>
           <p>J'ai reçu le code de base ainsi que la maquette du site. Voici les étapes que j'ai suivies :</p>
