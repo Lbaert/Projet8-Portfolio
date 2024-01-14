@@ -61,7 +61,7 @@ const Projects = () => {
       title: 'Kasa',
       description: 'Créez une application web de location immobilière avec React',  
       imageUrl: './img/projects/kasa.webp',
-      technologies: ['React', 'Sass', 'JavaScript'],
+      technologies: ['react', 'sass', 'javascript'],
       text: (
         <div className='text-collapse'>
           <p>J'ai reçu le code de base ainsi que la maquette du site. Voici les étapes que j'ai suivies :</p>
@@ -89,7 +89,7 @@ const Projects = () => {
       title: 'Mon Vieux Grimoire',
       description: 'Développez le back-end d\'un site de notation de livres',
       imageUrl: './img/projects/mvg.webp',
-      technologies: ['JavaScript', 'MongoDB', 'Mongoose', 'Nodejs', 'Express'],
+      technologies: ['javascript', 'mongoDB', 'mongoose', 'nodejs', 'express'],
       text: (
         <div className='text-collapse'>
           <p>J'ai reçu le front-end et les spécifications fonctionnelles demandés. Voici les étapes que j'ai suivies</p>
@@ -113,7 +113,7 @@ const Projects = () => {
       title: 'Nina Carducci',
       description: 'Débuggez et optimisez un site de photographe',
       imageUrl: './img/projects/nina.webp',
-      technologies: ['SEO'],
+      technologies: ['seo'],
       text: (
         <div className='text-collapse'>
           <p>J'ai reçu le code et l'audit du site. Voici les étapes que j'ai suivies :</p>
