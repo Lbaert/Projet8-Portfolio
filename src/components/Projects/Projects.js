@@ -4,12 +4,12 @@ import './Projects.scss';
 // Fonction pour mapper les technologies aux icônes correspondantes
 const mapTechnologiesToIcons = (technologies) => {
   const iconMap = {
-    html: 'html.png',
+    HTML: 'html.png',
     CSS: 'css.png',
     React: 'react.png',
     Sass: 'sass.png',
     JavaScript: 'javascript.png',
-    mongodb: 'mongodb.png',
+    MongoDB: 'mongodb.png',
     Mongoose: 'mongoose.png',
     Nodejs: 'nodejs.png',
     Express: 'express.png',
@@ -49,6 +49,8 @@ const Projects = () => {
             <p>10 - Mise en place du design responsive.</p>
             <p>11 - Vérification de la qualité du code.</p>
           </div>
+          <p>Problème : Pendant la création de la page d'accueil pour le projet Booki, j'ai rencontré des défis dans l'application des styles avec CSS, entraînant une mise en page non demandé.</p>
+          <p>Solution : Pour résoudre ce problème, j'ai développé mes compétences en utilisant les DevTools, en particulier l'inspecteur, pour analyser la structure HTML. En comprenant mieux la hiérarchie des éléments, j'ai pu cibler spécifiquement les éléments à styliser. Les DevTools m'ont permis d'expérimenter en direct, d'ajuster les styles de manière itérative, et d'acquérir des automatismes dans le processus de stylisation, améliorant ainsi l'apparence de la page d'accueil de l'agence de voyage.</p>
         </div>
       ),
       links: [
@@ -77,11 +79,12 @@ const Projects = () => {
             <p>9 - Gérez l’erreur sur l’id d’une propriété.</p>
             <p>10 - Vérifiez l’ensemble de votre site.</p>
           </div>
+          <p>Problème : La découverte de nouvelles technologies lors du projet Kasa, notamment React, a posé des défis, notamment en termes de gestion des composants et de la réutilisation du code.</p>
+          <p>Solution : Pour résoudre ce problème, j'ai rapidement compris l'importance d'utiliser des blocs réutilisables. J'ai opté pour l'utilisation de SASS pour une gestion plus efficace des styles, et j'ai intégré React pour créer une interface modulaire. Cela a non seulement facilité le développement mais a également amélioré la maintenabilité de l'application de location immobilière, offrant ainsi une expérience conviviale et efficace aux utilisateurs.</p>
         </div>
       ),
       links: [
         { label: 'GitHub', url: 'https://github.com/Lbaert/Projet6-Kasa' },
-        { label: 'Website', url: 'https://lbaert.github.io/Projet6-Kasa/' }
       ]
     },
     {
@@ -101,11 +104,12 @@ const Projects = () => {
             <p>5 - Gestion de l’ajout d’une notation d’un livre</p>
             <p>6 - Gestion du calcul de la note moyenne d’un livre</p>
           </div>
+          <p>Problème : La gestion des images dans le projet Mon Vieux Grimoire a posé des défis, en particulier en termes de dimensionnement, de conversion et de compression tout en assurant la suppression de l'image originale.</p>
+          <p>Solution : Pour surmonter cela, j'ai acquis la compétence de redimensionner, convertir et compresser les images de manière efficace. J'ai également mis en place un processus automatisé qui garantit la suppression sécurisée des images originales après leur traitement, assurant ainsi une gestion optimale des ressources tout en préservant la robustesse de l'application de notation de livres.</p>
         </div>
       ),
       links: [
         { label: 'GitHub', url: 'https://github.com/Lbaert/Projet7-MonVieuxGrimoire' },
-        { label: 'Website', url: 'https://lbaert.github.io/Projet7-MonVieuxGrimoire/' }
       ]
     },
     {
@@ -127,6 +131,8 @@ const Projects = () => {
             <p>7 - Correction de l’accessibilité.</p>
             <p>8 - Génération des rapports finaux et relecture des documents.</p>
           </div>
+          <p>Problème : Un problème majeur dans le projet Nina Carducci était la lenteur du chargement des images, affectant les performances globales du site.</p>
+          <p>Solution : Pour résoudre ce problème, j'ai compressé les images sans compromettre leur qualité et optimisé les balises ALT pour améliorer l'accessibilité. Ces mesures ont significativement amélioré les performances du site, offrant une expérience utilisateur plus fluide et répondant aux meilleures pratiques SEO techniques.</p>
         </div>
       ),
       links: [
@@ -139,7 +145,7 @@ const Projects = () => {
       title: 'Sophie Bluel',
       description: 'Créez une page web dynamique avec JavaScript',
       imageUrl: './img/projects/sophie.webp',
-      technologies: ['html', 'css'],
+      technologies: ['JavaScript', 'HTML', 'CSS'],
       text: (
         <div className='text-collapse'>
           <p>J'ai reçu le code de base, la maquette du site ainsi que le Kanban. Voici les étapes que j'ai suivies :</p>
@@ -150,11 +156,12 @@ const Projects = () => {
             <p>4 - Ajoutez la modale.</p>
             <p>5 - Vérifiez l’ensemble du projet et s’assurer dutraitement des erreurs dans les formulaires.</p>
           </div>
+          <p>Problème : La découverte des API a posé un défi dans le projet de Sophie Bluel, notamment pour récupérer et afficher dynamiquement des images.</p>
+          <p>Solution : Pour surmonter cela, j'ai appris à utiliser l'API de stockage d'images, mis en place des requêtes pour récupérer les images en fonction des projets de Sophie Bluel, puis utilisé JavaScript pour dynamiquement les afficher sur sa page portfolio, offrant ainsi une expérience interactive et esthétique.</p>
         </div>
       ),
       links: [
         { label: 'GitHub', url: 'https://github.com/Lbaert/Projet3-SophieBluel' },
-        { label: 'Website', url: 'https://lbaert.github.io/Projet3-SophieBluel/' }
       ]
     },
   ];
