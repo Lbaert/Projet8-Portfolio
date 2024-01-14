@@ -14,8 +14,8 @@ const Header = () => {
 
   return (
     <header>
-      <img src='./img/logo.png' alt="Logo" className='logo'/>
       <Sidebar isOpen={isSidebarOpen} toggleSidebar={toggleSidebar} />
+      <img src='./img/logo.png' alt="Logo" className='logo'/>
     </header>
   );
 };

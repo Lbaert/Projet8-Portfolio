@@ -61,7 +61,7 @@ header {
   .modal {
     position: fixed; 
     top: 0;
-    right: 0; 
+    left: 0; 
     background-color: #171725;
     width: 100px;
     height: 100vh; 
@@ -115,7 +115,7 @@ header {
             color: #11E397;
             span {
               display: inline-block;
-              right: 50px;
+              left: 50px;
               background-color: #171725;
               padding: 20px;
               border-radius: 20px;
@@ -129,7 +129,7 @@ header {
   }
   &.open {
     .modal {
-      right: 0;
+      left: 0;
     }
   }
 }
