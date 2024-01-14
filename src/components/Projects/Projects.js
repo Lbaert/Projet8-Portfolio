@@ -9,7 +9,7 @@ const mapTechnologiesToIcons = (technologies) => {
     React: 'react.png',
     Sass: 'sass.png',
     JavaScript: 'javascript.png',
-    MongoDB: 'mongodb.png',
+    mongodb: 'mongodb.png',
     Mongoose: 'mongoose.png',
     Nodejs: 'nodejs.png',
     Express: 'express.png',
@@ -89,7 +89,7 @@ const Projects = () => {
       title: 'Mon Vieux Grimoire',
       description: 'Développez le back-end d\'un site de notation de livres',
       imageUrl: './img/projects/mvg.webp',
-      technologies: ['javascript', 'mongoDB', 'mongoose', 'nodejs', 'express'],
+      technologies: ['javascript', 'mongodb', 'mongoose', 'nodejs', 'express'],
       text: (
         <div className='text-collapse'>
           <p>J'ai reçu le front-end et les spécifications fonctionnelles demandés. Voici les étapes que j'ai suivies</p>
