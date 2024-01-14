@@ -145,7 +145,7 @@ const Projects = () => {
       title: 'Sophie Bluel',
       description: 'Créez une page web dynamique avec JavaScript',
       imageUrl: './img/projects/sophie.webp',
-      technologies: ['JavaScript', 'HTML', 'CSS'],
+      technologies: ['javascript', 'html', 'css'],
       text: (
         <div className='text-collapse'>
           <p>J'ai reçu le code de base, la maquette du site ainsi que le Kanban. Voici les étapes que j'ai suivies :</p>
